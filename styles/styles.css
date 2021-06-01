@@ -377,8 +377,13 @@ p {
     font-family: 'Quicksand', sans-serif;
 }
 
+
 main {
-    margin: 20% 2% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1em;
+    height: 80vh;
 }
 
 .title {
