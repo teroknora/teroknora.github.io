@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
     
     console.log('loaded');
+
     const lightSwitchButton = document.querySelector('.on-off');
     lightSwitchButton.addEventListener('click', () => lightToggle());
 })
