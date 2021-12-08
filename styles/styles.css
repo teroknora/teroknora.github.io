@@ -29,6 +29,7 @@ a:hover {
 
 h1 {
     font-family: 'Rhodium Libre', serif;
+    font-display: swap;
 }
 
 p, small {
