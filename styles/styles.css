@@ -2,9 +2,9 @@
 
     /*===============colors============== */
     --main-color: #07689f;
-    --second-color: #a2d5f2;
+    --second-color: #c4e7fc;
     --light-color: #fafafa;
-    --accent-color: #ff7e67;
+    --accent-color: #ffbcb0;
     --dark-mode-dark: #00111b;
 
   }
@@ -15,11 +15,25 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
-h1 {
+a {
+  color: var(--light-color, white);
+}
 
+a:visited {
+  color: var(--second-color, aliceblue);
+}
+
+a:hover {
+  color: var(--accent-color, lightpink);
+}
+
+h1 {
     font-family: 'Rhodium Libre', serif;
 }
 
+p, small {
+  line-height: 1.5;
+}
 
 main {
     display: flex;
@@ -29,16 +43,16 @@ main {
     height: 80vh;
 }
 
-
 .placeholder-marquee {
-
   margin-top: 3em;
 }
 
-.lightswitch {
+.placeholder-marquee p {
+  max-width: 70vw;
+}
 
+.lightswitch {
   margin-top: 3em;
- 
 }
 
 button {
@@ -62,34 +76,34 @@ button:hover {
 }
 
 .subtitle {
-    font-size: 1em;
+    font-size: 2em;
+    line-height: 1.25;
+}
+.social-icons {
+  margin-top: 3em;
 }
 
 /*============== dark style ================= */
 
 .dark {
-
   background: var(--dark-mode-dark);
+  color: var(--light-color);
+}
+
+.dark .title {
+  background: linear-gradient(90deg, rgba(255,124,124,1) 0%, rgba(255,171,139,1) 10%, rgba(255,208,156,1) 20%, rgba(255,249,134,1) 33%, rgba(232,255,114,1) 43%, rgba(140,255,137,1) 54%, rgba(48,253,239,1) 64%, rgba(58,221,253,1) 76%, rgba(63,161,253,1) 86%, rgba(69,83,252,1) 98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.no-animation {
+  text-shadow: none;
+  animation: none !important;
   color: #fff;
- 
 }
 
-.neon {
 
-  /* adapted from https://codepen.io/silvia-odwyer/pen/RwKMWqm */
-
-  text-shadow:
-  0 0 2px #fff,
-  0 0 8px #fff,
-  0 0 10px var(--main-color),
-  0 0 36px var(--main-color),
-  0 0 60px var(--main-color),
-  0 0 65px var(--main-color),
-  0 0 70px var(--main-color),
-  0 0 100px var(--main-color);
-
-  animation: flicker 2.5s infinite alternate;
-}
 
 /*============== media queries ================= */
 
@@ -104,6 +118,10 @@ button:hover {
         font-size: 2em;
     }
 
+    p {
+      font-size: 1.25em;
+    }
+
 }
 
 @media screen and (prefers-reduced-motion) { 
@@ -114,7 +132,7 @@ button:hover {
 
 
 /*============== keyframes ================= */
-
+/* TODO: smooth out
 @keyframes flicker {
 
   100% {
@@ -141,8 +159,9 @@ button:hover {
     0 0 40px var(--main-color),
     0 0 50px var(--main-color);
 
-    color: rgba(0, 0, 0, .2)
+    color: rgba(0, 0, 0, .1)
   }
 
 
 }
+*/
