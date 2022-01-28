@@ -10,6 +10,10 @@
   }
 
 body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1em;
+    height: 95vh;
     background-color: var(--main-color, #07689f);
     color: var(--light-color, white);
     font-family: 'Quicksand', sans-serif;
@@ -38,17 +42,19 @@ p, small {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin: 0 1em;
-    height: 80vh;
+}
+
+footer {
+  margin-top: auto;
+  padding-top: 1em;
 }
 
 .placeholder-marquee {
-  margin-top: 3em;
+  margin-top: 2em;
 }
 
 .placeholder-marquee p {
-  max-width: 70vw;
+  max-width: 90vw;
 }
 
 .lightswitch {
@@ -79,8 +85,12 @@ button:hover {
     font-size: 2em;
     line-height: 1.25;
 }
-.social-icons {
-  margin-top: 3em;
+ .social-icons {
+  margin-top: .5em;
+}
+
+.social-icons a {
+  margin-right: .25em;
 }
 
 /*============== dark style ================= */
@@ -93,23 +103,14 @@ button:hover {
 .dark .title {
   background: linear-gradient(90deg, rgba(255,124,124,1) 0%, rgba(255,171,139,1) 10%, rgba(255,208,156,1) 20%, rgba(255,249,134,1) 33%, rgba(232,255,114,1) 43%, rgba(140,255,137,1) 54%, rgba(48,253,239,1) 64%, rgba(58,221,253,1) 76%, rgba(63,161,253,1) 86%, rgba(69,83,252,1) 98%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
-
-.no-animation {
-  text-shadow: none;
-  animation: none !important;
-  color: #fff;
-}
-
-
 
 /*============== media queries ================= */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 767px) {
  
-
     .title {
         font-size: 8em;
     }
@@ -118,50 +119,18 @@ button:hover {
         font-size: 2em;
     }
 
-    p {
-      font-size: 1.25em;
+    .placeholder-marquee {
+      margin-top: 2.5em;
     }
 
-}
+    p {
+      font-size: 1.25em;
+    } 
 
+}
+ 
 @media screen and (prefers-reduced-motion) { 
   html {
     animation: none;
   }
 }
-
-
-/*============== keyframes ================= */
-/* TODO: smooth out
-@keyframes flicker {
-
-  100% {
-    text-shadow:
-    0 0 2px #fff,
-    0 0 8px #fff,
-    0 0 10px var(--main-color),
-    0 0 36px var(--main-color),
-    0 0 60px var(--main-color),
-    0 0 65px var(--main-color),
-    0 0 70px var(--main-color),
-    0 0 100px var(--main-color);
-  }
-
-  0% {
-
-    text-shadow:
-    0 0 2px rgba(235, 231, 231, 0.7),
-    0 0 3px rgba(235, 231, 231, 0.7),
-    0 0 3px var(--main-color),
-    0 0 21px var(--main-color),
-    0 0 28px var(--main-color),
-    0 0 35px var(--main-color),
-    0 0 40px var(--main-color),
-    0 0 50px var(--main-color);
-
-    color: rgba(0, 0, 0, .1)
-  }
-
-
-}
-*/
