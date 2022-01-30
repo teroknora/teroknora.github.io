@@ -6,14 +6,13 @@
     --light-color: #fafafa;
     --accent-color: #ffbcb0;
     --dark-mode-dark: #00111b;
-
   }
 
 body {
     display: flex;
     flex-direction: column;
     margin: 0 1em;
-    height: 95vh;
+    min-height: 100vh;
     background-color: var(--main-color, #07689f);
     color: var(--light-color, white);
     font-family: 'Quicksand', sans-serif;
